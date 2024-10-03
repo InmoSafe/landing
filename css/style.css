@@ -1,4 +1,10 @@
-body, h1, h2, p, ul, li, a {
+body,
+h1,
+h2,
+p,
+ul,
+li,
+a {
   margin: 0;
   padding: 0;
 }
@@ -144,7 +150,19 @@ img {
 }
 
 @media screen and (max-width: 759px) {
-  .offset-1, .offset-2, .offset-3, .offset-4, .offset-5, .offset-6, .offset-7, .offset-8, .offset-9, .offset-10, .offset-11, .offset-12 {
+
+  .offset-1,
+  .offset-2,
+  .offset-3,
+  .offset-4,
+  .offset-5,
+  .offset-6,
+  .offset-7,
+  .offset-8,
+  .offset-9,
+  .offset-10,
+  .offset-11,
+  .offset-12 {
     margin-left: 0px;
   }
 }
@@ -169,7 +187,8 @@ img {
   }
 }
 
-.container::after, .container::before {
+.container::after,
+.container::before {
   content: "";
   display: table;
   clear: both;
@@ -188,7 +207,8 @@ img {
   }
 }
 
-.row::after, .row::before {
+.row::after,
+.row::before {
   content: "";
   display: table;
   clear: both;
@@ -558,10 +578,10 @@ img {
 .rede-social {
   display: flex;
   max-width: 900px;
-  padding: 70px 80px;
+  padding: 70px 300px;
   margin: 0 auto;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   background: #fff;
   box-shadow: 0px 50px 100px rgba(6, 12, 58, 0.2);
   position: relative;
