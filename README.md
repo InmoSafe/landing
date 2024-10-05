@@ -1,3 +1,14 @@
+TODO
+-Logo con letra de título
+~~Tildes~~
+~~Agencias inmobiliarias no profesionales inmobiliarios~~
+~~Tus propiedades -> la gestión de las propiedades~~
+~~Cambiar Rastrea a tus seguidores es invasivo~~
+-En aumentar Ventas hay que argumentar el como lo vamos a lograr
+~~Quitar de todos los niveles~~
+-De forma más descriptiva los beneficios de la aplicación, información tarifas membresías, más información que permita conocer más y porque somos mejores que los demás
+-Logo mejor
+-Imagen de la casa más pequeña
 
 
 <div align="center">

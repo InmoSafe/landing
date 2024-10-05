@@ -276,7 +276,7 @@ img {
 }
 
 .intro-bg {
-  height: 800px;
+  height: 1200px;
   background: linear-gradient(36.1deg, #DBE7FA 0%, #F2F6FD 100%);
 }
 
@@ -311,7 +311,7 @@ img {
 
 .intro p {
   font-size: 20px;
-  font-weight: bold;
+  /* font-weight: bold; */
   color: #8C8E9E;
   max-width: 379px;
   line-height: 36px;
@@ -328,6 +328,9 @@ img {
   border-radius: 30px;
   color: #fff;
   font-weight: 600;
+  position: relative;
+  left: 25%;
+  transform: translateX(-25%);
 }
 
 .intro span {
@@ -335,6 +338,7 @@ img {
 }
 
 .intro-img {
+  padding-top: 20%;
   width: 600px;
 }
 
