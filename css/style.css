@@ -276,7 +276,7 @@ img {
 }
 
 .intro-bg {
-  height: 1200px;
+  height: 1000px;
   background: linear-gradient(36.1deg, #DBE7FA 0%, #F2F6FD 100%);
 }
 
@@ -318,7 +318,7 @@ img {
   margin-bottom: 36px;
   max-width: 500px;
   margin: 0 auto;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 }
 
 .intro a {
@@ -435,7 +435,7 @@ img {
 }
 
 .feature-item {
-  padding: 50px;
+  padding: 40px;
   text-align: center;
 }
 
