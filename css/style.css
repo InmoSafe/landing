@@ -290,6 +290,7 @@ img {
 
 @media screen and (max-width: 759px) {
   .intro {
+    display:  flex;
     flex-direction: column;
     padding: 15px 15px;
     text-align: center;
@@ -311,14 +312,11 @@ img {
 
 .intro p {
   font-size: 20px;
-  /* font-weight: bold; */
   color: #8C8E9E;
   max-width: 379px;
   line-height: 36px;
   margin-bottom: 36px;
-  max-width: 500px;
-  margin: 0 auto;
-  margin-bottom: 40px;
+
 }
 
 .intro a {
@@ -329,18 +327,14 @@ img {
   color: #fff;
   font-weight: 600;
   position: relative;
-  left: 25%;
   transform: translateX(-25%);
 }
+
 
 .intro span {
   color: #04BEFE;
 }
 
-.intro-img {
-  padding-top: 20%;
-  width: 600px;
-}
 
 @media screen and (max-width: 759px) {
   .intro-img {
@@ -366,17 +360,23 @@ img {
   box-shadow: 0px 50px 100px rgba(6, 12, 58, 0.2);
   position: relative;
   border-radius: 30px;
-  top: -80px;
+  top: -80px; /* Esto causa la superposición en móviles */
   flex-wrap: wrap;
 }
 
 @media screen and (max-width: 759px) {
   .info {
     flex-direction: column;
-    padding: 50px;
-    margin-top: 30px;
+    padding: 50px; /* Aumentar el padding para que haya más espacio en móviles */
+    margin-top: 30px; /* Añadir margen superior para evitar la superposición */
+    top: 0px; /* Eliminar el desplazamiento negativo en móviles */
+  }
+
+  #logo {
+    display: none;
   }
 }
+
 
 .info h3 {
   color: #060C3A;
@@ -397,7 +397,6 @@ img {
   text-align: center;
   color: #8C8E9E;
   font-size: 20px;
-  color: #8C8E9E;
   max-width: 379px;
   line-height: 36px;
   margin-bottom: 36px;
@@ -575,6 +574,9 @@ img {
 
 /*===REDE SOCIAL===*/
 .rede-social-bg {
+  display: flex; /* Hacer que el contenedor use Flexbox */
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
   background-color: #fff;
   padding: 0 15px;
 }
@@ -582,17 +584,27 @@ img {
 .rede-social {
   display: flex;
   max-width: 900px;
-  padding: 70px 300px;
-  margin: 0 auto;
+  padding: 70px 200px; /* Este padding es demasiado grande en pantallas pequeñas */
   align-items: center;
   justify-content: space-between;
+  gap: 50px;
   background: #fff;
   box-shadow: 0px 50px 100px rgba(6, 12, 58, 0.2);
   position: relative;
   border-radius: 30px;
   top: 90px;
   flex-wrap: wrap;
+  flex-direction: row;
 }
+
+@media screen and (max-width: 759px) {
+  .rede-social {
+    padding: 70px 90px; /* Reducir el padding en pantallas pequeñas */
+    flex-direction: row; /* Cambiar la disposición de los elementos a una columna */
+    align-items: center; /* Centrar los elementos */
+  }
+}
+
 
 .rede-social h3 {
   color: #060C3A;
@@ -602,16 +614,38 @@ img {
   letter-spacing: -0.5px;
 }
 
+@media screen and (max-width: 759px) {
+  .rede-social h3 {
+    font-size: 24px; /* Reducir el tamaño del texto en móviles */
+    text-align: center; /* Centrar el texto */
+  }
+}
+
 .rede-social p {
   color: #8C8E9E;
   font-size: 19px;
   max-width: 373px;
 }
 
+@media screen and (max-width: 759px) {
+  .rede-social p {
+    font-size: 16px; /* Reducir el tamaño del texto en móviles */
+    text-align: center; /* Centrar el párrafo */
+  }
+}
+
+
 .rede-social img {
   height: 40px;
   width: auto;
 }
+
+@media screen and (max-width: 759px) {
+  .rede-social img {
+    height: 40px; /* Reducir el tamaño del ícono en móviles */
+  }
+}
+
 
 .footer-bg {
   background: linear-gradient(24.26deg, #DBE7FA 0%, #F2F6FD 100%);
@@ -644,4 +678,72 @@ footer .menu ul li {
 
 footer .menu ul li a {
   color: #8C8E9E;
+}
+
+/* Estilos generales para la tabla */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  text-align: left;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Encabezado de la tabla */
+thead tr {
+  background-color: #4481EB; /* Color de fondo */
+  color: #ffffff; /* Color del texto */
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+thead th {
+  padding: 15px;
+  font-weight: 600;
+}
+
+/* Celdas de la tabla */
+tbody td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #dddddd;
+}
+
+/* Color de fondo alternativo para las filas */
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Hover effect en las filas */
+tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Ajustes adicionales en móviles */
+@media screen and (max-width: 759px) {
+  table {
+    font-size: 14px;
+    top: 50px;
+    position: relative;
+  }
+  thead {
+    display: none; /* Ocultar el encabezado en móviles para tablas más compactas */
+  }
+  tbody td {
+    display: block;
+    text-align: right;
+    padding-left: 50%;
+    position: relative;
+  }
+  tbody td::before {
+    content: attr(data-label); /* Añadir los títulos de cada celda en móviles */
+    position: absolute;
+    left: 0;
+    width: 45%;
+    padding-left: 15px;
+    font-weight: bold;
+    text-align: left;
+    color: #4481EB; /* Color del texto en móvil */
+  }
 }
